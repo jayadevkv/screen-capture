@@ -1,0 +1,27 @@
+{
+  "name": "screen-capture",
+  "version": "1.0.0",
+  "description": "captures entire desktop within intervals",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayadevkv/screen-capture.git"
+  },
+  "keywords": [
+    "screen",
+    "capture"
+  ],
+  "author": "jayadev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayadevkv/screen-capture/issues"
+  },
+  "homepage": "https://github.com/jayadevkv/screen-capture#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0"
+  }
+}
