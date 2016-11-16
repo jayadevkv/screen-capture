@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jayadevkv/screen-capture#readme",
   "dependencies": {
+    "desktop-screenshot": "^0.1.1",
     "express": "^4.14.0",
     "nodemon": "^1.11.0"
   }
