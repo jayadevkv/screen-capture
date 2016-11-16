@@ -2,8 +2,6 @@ var modify = require('./modify.js');
 
 var express = require('express');
 
-var rmdir = require('rmdir');
-
 var app = express();
 
 var fs  = require('fs');
@@ -21,18 +19,22 @@ app.get('/', function(req, res){
 	        console.log("Screenshot succeeded");
 		});
 
-	},modify.interval*100);
+	},modify.interval*1000);
 
-	var clearImages = setInterval(function(){
+	if(modify.clearInterval!='')
+	{
 
-		fs.readdir('./'+modify.imgPath, function(error, files){
-			files.forEach(function(file){
-				fs.unlinkSync('./'+modify.imgPath+'/'+file);
+		var clearImages = setInterval(function(){
+
+			fs.readdir('./'+modify.imgPath, function(error, files){
+				files.forEach(function(file){
+					fs.unlinkSync('./'+modify.imgPath+'/'+file);
+				});
 			});
-		});
 
 
-	},modify.clearInterval*100+10);
+		},modify.clearInterval*1000+10);
+	}
 
 	res.end('Please be patient while we are recording screenshots of your desktop at intervals');
 
